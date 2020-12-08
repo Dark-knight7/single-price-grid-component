@@ -95,7 +95,7 @@ button:hover {
     font-weight: 400;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1000px) and (max-width: 1200px) {
     .container {
         margin: 100px auto 100px auto;
         width: 40%;
