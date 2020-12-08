@@ -95,21 +95,20 @@ button:hover {
     font-weight: 400;
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 600px) {
     .container {
         margin: 100px auto 100px auto;
-        width: 40%;
+        max-width: 600px;
         display: grid;
     }
 
     .top {
-        position: static;
+        grid-column-start: 1;
+		grid-column-end: -1;
     }
 
     .middle {
-        position: relative;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-radius: 0 0 0 10px;
     }
 
     button {
@@ -117,13 +116,7 @@ button:hover {
     }
 
     .bottom {
-        position: absolute;
-        width: 14%;
-        height: 227px;
-        top: 45.5%;
-        left: 52%;
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 0px;
+        border-radius: 0 0 10px 0;
     }
 }
 
