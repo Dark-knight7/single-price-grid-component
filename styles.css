@@ -2,126 +2,124 @@
 
 body {
     background-color: hsl(204, 43%, 93%);
-    font-family: 'Karla';
-    font-size: 16px;
-    line-height: 25px;
-    padding: 25px;
+	font-size: 16px;
+	font-family: 'Karla', sans-serif;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	line-height: 1.5;
 }
 
 .container {
-    box-sizing: border-box;
-    border-radius: 6px;
+    max-width: 400px;
+	margin: 0.75rem;
+	box-shadow: 0 5px 15px #b9c6ce;
+	border-radius: 10px;
 }
 
-.top {
+h2 {
+	font-size: 1.4rem;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+}
+
+
+.intro {
     background-color: white;
-    margin: 0, auto;
-    padding: 25px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+	color: hsl(218, 22%, 67%);
+    border-radius: 10px 10px 0 0;
+    padding: 1.5rem;
 }
 
-#top-h1 {
+#intro-h1 {
     color: hsl(179, 62%, 43%);
 }
 
-#top-h2 {
+#intro-h2 {
     color: hsl(71, 73%, 54%);
+    font-weight: 700;
 }
 
-#top-p {
+/* #top-p {
     color: hsl(218, 22%, 67%);
-}
+} */
 
-.middle {
+.box-subscription {
     background-color: hsl(179, 62%, 43%);
-    margin: 0, auto;
-    padding: 25px;
-}
-
-#middle-h1 {
     color: hsl(204, 43%, 93%);
-    font-size: 25px;
+    padding: 1.5rem;
 }
 
-#middle-h2 {
-    color: hsl(204, 43%, 93%);
-    font-size: 35px;
+#price {
+    display: flex;
+    align-items: center;
 }
 
-#middle-h2-span {
-    font-size: 15px;
-    color: hsl(0, 0%, 79%);
-    font-weight: 400;
+ .emphasis {
+    font-size: 2.25rem;
+	font-weight: 700;
+	margin-right: 0.5rem;
 }
 
-#middle-p {
-    color: hsl(204, 43%, 93%);
+#opaque {
+    opacity: 0.8;
 }
+
 
 button {
+    display: block;
     background-color: hsl(71, 73%, 54%);
     color: white;
-    font-family: 'Karla';
-    padding:15px 160px;
-    font-size:18px;
-    line-height:1.3333333;
-    border-width: 0px;
-    border-radius:6px;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 100px;
 }
 
 button:hover {
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.10);
 }
 
-.bottom {
-    background-color: rgb(74, 190, 189);
-    margin: 0, auto;
-    padding: 25px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px hsl(187, 69%, 33%), 0 0 0 .6rem hsl(179, 56%, 52%, 0.75);
 }
 
-#bottom-h1 {
-    color: white;
-    font-size: 15px;
-}
-
-.info {
-    color: hsl(0, 0%, 87%);
-    line-height: 4px;
-    font-weight: 400;
+.about-us {
+	background-color: hsl(179, 56%, 52%);
+	color: hsl(204, 43%, 93%);
+    border-radius: 0 0 10px 10px;
+    padding: 1.5rem;
 }
 
 @media (min-width: 1440px) and (max-width: 2100px) {
     .container {
-        margin: 100px auto 100px auto;
-        width: 40%;
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+        margin: 0.75rem;
     }
 
-    .top {
-        position: static;
+    .intro {
+        grid-column-start: 1;
+        grid-column-end: -1;
     }
 
-    .middle {
-        position: relative;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+    .box-subscription {
+        border-radius: 0 0 0 10px;
     }
 
     button {
         padding: 15px 100px;
     }
 
-    .bottom {
-        position: absolute;
-        width: 14%;
-        height: 227px;
-        top: 45.5%;
-        left: 52%;
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 0px;
+    .about-us {
+        border-radius: 0 0 10px 0;
     }
 }
 
